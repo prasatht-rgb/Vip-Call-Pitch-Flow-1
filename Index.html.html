@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VIP Call Pitch – One Page Flow Checklist</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f4f6f8; margin:0; padding:20px; }
+    .container { max-width: 1000px; margin:auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+    h1 { color:#4b2aad; margin-bottom:5px; }
+    h2 { color:#333; margin-top:25px; }
+    .flow-section { border-left:4px solid #4b2aad; padding-left:15px; margin-top:20px; }
+    .check { margin-top:10px; }
+    .check input { margin-right:8px; }
+    .hidden { display:none; }
+    textarea { width:100%; min-height:60px; margin-top:8px; }
+    .sub { margin-left:25px; border-left:3px dashed #ccc; padding-left:15px; margin-top:10px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>VIP Call Pitch – Live Call Checklist</h1>
+  <p>Tick each step during the call. Next steps open automatically.</p>
+
+  <!-- Step 1 -->
+  <div class="flow-section">
+    <div class="check">
+      <input type="checkbox" onclick="toggle('step2')"> <b>Step 1: Introduction</b> – Greet member & introduce Tamil Shaadi VIP Team
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="flow-section hidden" id="step2">
+    <div class="check">
+      <input type="checkbox" onclick="toggle('step3')"> <b>Step 2: Purpose of the Call</b> – Explain call objective & expectations
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="flow-section hidden" id="step3">
+    <h2>Step 3: Probing – Build Rapport</h2>
+
+    <div class="check"><input type="checkbox"> Who is handling the profile?</div>
+
+    <div class="check"><input type="checkbox"> How long have you been searching & what options tried?</div>
+
+    <div class="sub">
+      <div class="check"><input type="checkbox" onclick="toggle('badExp')"> Used Bharat Matrimony earlier – Bad Experience</div>
+      <div id="badExp" class="hidden">
+        <textarea placeholder="Capture member issues to use during call"></textarea>
+      </div>
+    </div>
+
+    <div class="check"><input type="checkbox"> Quick process or take time for best match?</div>
+    <textarea placeholder="Capture response"></textarea>
+
+    <div class="check"><input type="checkbox"> How frequently do you actively search?</div>
+    <textarea placeholder="Capture response"></textarea>
+
+    <div class="check"><input type="checkbox"> Top 3 priorities while choosing a match</div>
+    <textarea placeholder="Capture priorities"></textarea>
+
+    <div class="check">
+      <input type="checkbox" onclick="toggle('step4')"> Completed Probing
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="flow-section hidden" id="step4">
+    <h2>Partner & Family Understanding</h2>
+    <div class="check"><input type="checkbox"> Discuss important partner preferences</div>
+    <div class="check"><input type="checkbox"> Understand family background & potential</div>
+    <div class="check"><input type="checkbox"> Discuss recent activity tab</div>
+    <div class="check"><input type="checkbox" onclick="toggle('step5')"> Done</div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="flow-section hidden" id="step5">
+    <h2>Why VIP – Product Mapping</h2>
+    <div class="check"><input type="checkbox"> Designed for member who take marriage very seriously
+</div>
+    <div class="check"><input type="checkbox"> Saves time & ensures privacy</div>
+    <div class="check"><input type="checkbox"> Only quality matches shared</div>
+    <div class="check"><input type="checkbox"> You simply make decisions , All ground works to be take care by consultant</div>
+    <div class="check"><input type="checkbox"> Higher Reach with the prospects & Higher Success Ratio</div>
+    <div class="check"><input type="checkbox" onclick="toggle('step6')"> Explained Why VIP</div>
+  </div>
+
+  <!-- Step 6 -->
+  <div class="flow-section hidden" id="step6">
+    <h2>VIP Process</h2>
+    <div class="check"><input type="checkbox"> Top Rated Consultant (4.5★ & above)</div>
+    <div class="check"><input type="checkbox"> Handpicked profiles in VIP Shaadi App</div>
+    <div class="check"><input type="checkbox"> Consultant arranges Concall</div>
+    <div class="check"><input type="checkbox" onclick="toggle('step7')"> Process Explained</div>
+  </div>
+
+  <!-- Step 7 -->
+  <div class="flow-section hidden" id="step7">
+    <h2>Features & Benefits</h2>
+    <div class="check"><input type="checkbox"> Premium Designer Biodata (Shared only with Approved Prospects</div>
+    <div class="check"><input type="checkbox"> BGV (Post Concall – RI Profiles)</div>
+    <div class="check"><input type="checkbox"> 100% Discreet & Confident</div>
+    <div class="check"><input type="checkbox"> Content Write-up Team</div>
+    <div class="check"><input type="checkbox"> VIP Purple Tag</div>
+    <div class="check"><input type="checkbox"> Online Membership</div>
+    <div class="check"><input type="checkbox" onclick="toggle('step8')"> Features Explained</div>
+  </div>
+
+  <!-- Step 8 -->
+  <div class="flow-section hidden" id="step8">
+    <h2>Feedback, Pricing & Objection Handling</h2>
+    <div class="check"><input type="checkbox"> Asked for feedback</div>
+    <div class="check"><input type="checkbox"> Explain pricing</div>
+    <textarea placeholder="Capture objections & responses"></textarea>
+    <div class="check"><input type="checkbox"> Call Completed</div>
+  </div>
+
+</div>
+
+<script>
+  function toggle(id) {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('hidden');
+  }
+</script>
+</body>
+</html>
